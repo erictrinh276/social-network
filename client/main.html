@@ -1,0 +1,16 @@
+<head>
+  <meta charset="utf-8" />
+  <title>Learn Web Social Network</title>
+</head>
+
+<body>
+  {{> loginButtons}}
+  <div id="wrapper">
+    <div id="profile-area">
+      {{> profileArea}}
+    </div>
+    <div id="feed-area">
+      {{#if currentUser}} {{> postForm }} {{ > postList }} {{/if}}
+    </div>
+  </div>
+</body>

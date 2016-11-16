@@ -1,0 +1,26 @@
+<template name="profileArea">
+    {{#if currentUser}}
+    <div id="side-profile" class="side-box">
+        <a class="filter-user">{{currentUser.username}}</a>
+    </div>
+    <div id="side-community" class="side-box">
+        <a class="community">Community</a>
+    </div>
+    <div id="side-following" class="side-box">
+        <h3>Following</h3>
+        <div class="boxcontent">
+            {{#each username in following}}
+                <div><a class="filter-user">{{username}}</a></div>
+            {{/each}}
+        </div>
+    </div>
+    <div id="side-follows" class="side-box">
+        <h3>Follows You</h3>
+        <div class="boxcontent">
+            {{#each followers}}
+                <div><a class="filter-user">{{username}}</a></div>
+            {{/each}}
+        </div>
+    </div>
+    {{/if}}
+</template>
